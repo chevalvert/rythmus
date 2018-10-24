@@ -1,0 +1,25 @@
+rythmus
+
+Usage:
+  rythmus --config=<path>
+  rythmus --help
+  rythmus --version
+
+Options:
+  -h, --help              Show this screen.
+  -v, --version           Print the current version.
+  --config=<path>         Override the default config with a given json file.
+  -hot                    Enable hot reloading of all configuration files
+                          (including .rythmusrc, but excluding env and cli args)
+  --viewer=<path>         Open the rythmus-viewer applet as its visualiser.
+  --log-level=<level>     Set the log level (default is 'info').
+
+Log level:
+  0, emergency            System is unusable.
+  1, alert                Action must be taken immediately.
+  2, critical             The system is in critical condition.
+  3, error                Error condition.
+  4, warning              Warning condition.
+  5, notice               A normal but significant condition.
+  6, info                 A purely informational message.
+  7, debug                Messages to debug an application.

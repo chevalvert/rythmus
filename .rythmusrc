@@ -1,0 +1,25 @@
+{
+  "fps": 60,
+  "mapping-file": "rythmus.mapping.production.json",
+  "log-level": 6,
+
+  "hnode": {
+    "lockRate": 25,
+
+    "PORT_SERVER": 3737,
+    "TIME_TICK": 100,
+    "TIME_OFFLINE": 1000,
+    "TIME_GONE": 3000,
+    "NLEDS_STRIPS": 178,
+    "NSTRIPS_CLIENT": 1
+  },
+
+  "stripledLengths": {
+    "default": 178,
+    "sensor": 70
+  },
+
+  "colors": {
+    "fallback": [128, 0, 128]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "rythmus",
+  "version": "0.0.1",
+  "description": "rythmus main app",
+  "author": "Arnaud Juracek",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "rythmus": "index.js"
+  },
+  "scripts": {
+    "dev": "node . --config=rythmus.config.dev.json --hot"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@config": "main.config.js",
+    "@lib": "lib",
+    "@utils": "lib/utils",
+    "@abstractions": "lib/abstractions"
+  },
+  "dependencies": {
+    "chokidar": "^2.0.4",
+    "chroma-js": "^1.4.0",
+    "hnode": "hemisphere-project/stratum-hnode",
+    "log": "^1.4.0",
+    "module-alias": "^2.1.0",
+    "package": "^1.0.1",
+    "parse-strings-in-object": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
