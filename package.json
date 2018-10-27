@@ -23,9 +23,12 @@
     "chroma-js": "^1.4.0",
     "hnode": "hemisphere-project/stratum-hnode",
     "log": "^1.4.0",
+    "missing-math": "^2.0.1",
     "module-alias": "^2.1.0",
     "package": "^1.0.1",
-    "parse-strings-in-object": "^1.2.0"
+    "parse-strings-in-object": "^1.2.0",
+    "serialport": "^7.0.2",
+    "tiny-emitter": "^2.0.2"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
