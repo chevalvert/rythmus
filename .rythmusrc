@@ -1,6 +1,6 @@
 {
   "fps": 60,
-  "mapping-file": "rythmus.mapping.production.json",
+  "mapping-file": "config/mapping.production.json",
   "log-level": 6,
 
   "hnode": {
@@ -11,15 +11,24 @@
     "TIME_OFFLINE": 1000,
     "TIME_GONE": 3000,
     "NLEDS_STRIPS": 178,
-    "NSTRIPS_CLIENT": 1
+    "NSTRIPS_CLIENT": 2
   },
 
-  "heartSensors": {
+  "sensors": {
+    "mockable": {
+      "interval": 20,
+      "signal": "(x - Math.ceil(x/20 - 0.5)*20)"
+    },
     "baudRate": 115200,
     "ports": ["/dev/tty.usbmodem1411"],
+    "reconnection": {
+      "maxAttempts": 1000,
+      "delayBetweenAttempts": 1000
+    },
     "cyclesThreshold": 1,
     "pulseSampleSize": 100,
-    "adaptativePulseThresholdCoefficient": 0.5
+    "pulseSampleLowPassSmoothing": 0.8,
+    "adaptativePulseThresholdCoefficient": 0.25
   },
 
   "stripledLengths": {

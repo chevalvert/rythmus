@@ -1,0 +1,9 @@
+{
+  "nodes": {
+    "Hnode-113": [0, 1]
+  },
+
+  "sensors": {
+    "/dev/tty.usbmodem1411": 1
+  }
+}

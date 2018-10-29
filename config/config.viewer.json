@@ -6,6 +6,6 @@
   "hnode": {
     "PORT_SERVER": 3838,
     "NLEDS_STRIPS": 178,
-    "NSTRIPS_CLIENT": 4
+    "NSTRIPS_CLIENT": 2
   }
 }

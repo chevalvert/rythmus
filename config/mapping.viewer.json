@@ -11,5 +11,8 @@
     "fakenode_8": [32, 33, 34, 35]
   },
 
-  "sensors": [0, 18]
+  "sensors": {
+    "/dev/tty.usbmodem1411": 0,
+    "/dev/tty.usbmodem1421": 18
+  }
 }
