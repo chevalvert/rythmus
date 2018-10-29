@@ -36,9 +36,9 @@ const log = new Log(configuration['log-level'] || 6)
 
 /**
  * HOT RELOADING
- * only when --live flag is present
+ * only when --hot flag is present
  */
-if (configuration.live) {
+if (configuration.hot) {
   require('chokidar')
     .watch(configuration.configs)
     .on('change', () => {
