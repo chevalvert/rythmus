@@ -16,8 +16,9 @@
 
   "sensors": {
     "mockable": {
+      "autoConnect": true,
       "interval": 20,
-      "signal": "(x - Math.ceil(x/20 - 0.5)*20)"
+      "signal": "40 + (x - Math.ceil(x/40 - 0.5)*40)"
     },
     "baudRate": 115200,
     "ports": ["/dev/tty.usbmodem1411"],
@@ -26,9 +27,13 @@
       "delayBetweenAttempts": 1000
     },
     "cyclesThreshold": 1,
-    "pulseSampleSize": 100,
-    "pulseSampleLowPassSmoothing": 0.8,
-    "adaptativePulseThresholdCoefficient": 0.25
+    "adaptativePulseThresholdCoefficient": 0.25,
+    "pulseSample": {
+      "size": 128,
+      "smoothing": 0.5,
+      "boundariesAnalysisWindowSize": 32,
+      "boundariesSmoothing": 0.5
+    }
   },
 
   "stripledLengths": {
