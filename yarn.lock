@@ -466,6 +466,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+bezier-easing@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
+
 binary-extensions@^1.0.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
@@ -875,6 +880,11 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
   integrity sha1-hMbhWbgZBP3KWaDvRM2HDTElD5o=
+
+dependency-graph@^0.5.0:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.5.2.tgz#c10e03652b653b8bcd4b09b63a175fae323da131"
+  integrity sha512-fuF8ISen2Rk75wQ4tWHcfJ/IV1cmPMFE+wth10tAnj/JkpqMJzNW5oKpVOCAkpdfYD+NwtA3kL3nOeyprxPG2A==
 
 detect-libc@^1.0.2, detect-libc@^1.0.3:
   version "1.0.3"
@@ -1549,6 +1559,14 @@ inquirer@^6.1.0:
     string-width "^2.1.0"
     strip-ansi "^4.0.0"
     through "^2.3.6"
+
+invalidate-module@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/invalidate-module/-/invalidate-module-1.0.0.tgz#5cfa2359ff540739479e6d2a0aefbed71d30617f"
+  integrity sha1-XPojWf9UBzlHnm0qCu++1x0wYX8=
+  dependencies:
+    debug "^2.6.6"
+    dependency-graph "^0.5.0"
 
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"
@@ -3373,6 +3391,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vec23@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vec23/-/vec23-0.1.0.tgz#8046d427d9729153c6c4dcb0e141bd21b2504dbb"
+  integrity sha1-gEbUJ9lykVPGxNyw4UG9IbJQTbs=
 
 warning-symbol@^0.1.0:
   version "0.1.0"

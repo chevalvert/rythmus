@@ -1,5 +1,4 @@
 {
-  "fps": 30,
   "log-level": 8,
   "viewer": "/Users/RNO/Projects/chevalvert/rythmus/rythmus-viewer/sketch",
   "mapping-file": "config/mapping.viewer.json",
@@ -8,5 +7,16 @@
     "PORT_SERVER": 3737,
     "NLEDS_STRIPS": 178,
     "NSTRIPS_CLIENT": 4
+  },
+
+  "animations": {
+    "iddle": {
+      "white": [255, 255, 255],
+      "resolution": [0.2, 0.02],
+      "posterization": 255
+    },
+    "invitation": {
+      "white": [255, 255, 255]
+    }
   }
 }

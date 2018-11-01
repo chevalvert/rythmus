@@ -5,29 +5,24 @@ const { configuration } = require('@config')
 process.title = configuration.package.name
 
 const rythmus = require('@lib/rythmus')
-const hearts = require('@lib/hearts')
+const players = require('@lib/players')
+const animations = require('@animations')([
+  require('@animations/iddle'),
+  require('@animations/invitation'),
+  require('@animations/loading'),
+  require('@animations/pulse')
+], { rythmus, players })
 
-// const keyboard = require('@utils/keyboard')
-// let zk = 0
-// keyboard(key => {
-//   if (key.name === 'up') zk++
-//   if (key.name === 'down') zk--
-//   console.log(zk)
-// })
+players.setHistorySize(rythmus.circumference / 2 + 1)
 
-let frameCount = 0
-rythmus.raf(() => {
-  frameCount++
-  rythmus.clear()
+rythmus.raf(players.update)
+rythmus.raf(rythmus.clear)
+rythmus.raf(frameCount => {
+  animations.iddle(frameCount, 1 - players.confidence)
+  animations.invitation(frameCount, 1)
 
-  const o = (Math.sin(frameCount * 0.01) + 1) / 2
-  const zmax = rythmus.height * ((Math.cos(frameCount * 0.1 * o) + 1) / 2)
-  for (let i = 0; i < rythmus.circumference; i++) {
-    for (let z = zmax - o * zmax; z < zmax; z++) {
-      rythmus.inside(i, z, [255 * o, 0, 255 * o])
-      rythmus.outside(i, z, [255 * (1 - o), 255 * (1 - o), 0])
-    }
-  }
+  animations.loading(frameCount, 1)
+  animations.pulse(frameCount, 1)
 })
 
 rythmus.start()
