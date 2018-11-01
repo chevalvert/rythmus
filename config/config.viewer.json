@@ -1,11 +1,12 @@
 {
-  "log-level": 7,
+  "fps": 30,
+  "log-level": 8,
   "viewer": "/Users/RNO/Projects/chevalvert/rythmus/rythmus-viewer/sketch",
-  "mapping-file": "rythmus.mapping.dev.json",
+  "mapping-file": "config/mapping.viewer.json",
 
   "hnode": {
-    "PORT_SERVER": 3838,
+    "PORT_SERVER": 3737,
     "NLEDS_STRIPS": 178,
-    "NSTRIPS_CLIENT": 2
+    "NSTRIPS_CLIENT": 4
   }
 }

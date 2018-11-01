@@ -1,28 +1,4 @@
 {
   "log-level": 8,
-  "mapping-file": "config/mapping.dev.json",
-
-  "hnode": {
-    "PORT_SERVER": 3737,
-    "NLEDS_STRIPS": 178,
-    "NSTRIPS_CLIENT": 2
-  },
-
-  "sensors": {
-    "mockable": {
-      "autoConnect": true,
-      "interval": 20,
-      "signal": "40 + (x - Math.ceil(x/40 - 0.5)*40)"
-    },
-    "baudRate": 115200,
-    "ports": ["/dev/tty.usbmodem1411"],
-    "cyclesThreshold": 1,
-    "adaptativePulseThresholdCoefficient": 0.25,
-    "pulseSample": {
-      "size": 128,
-      "smoothing": 0.5,
-      "boundariesAnalysisWindowSize": 32,
-      "boundariesSmoothing": 0.5
-    }
-  }
+  "mapping-file": "config/mapping.dev.json"
 }

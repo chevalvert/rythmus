@@ -17,11 +17,19 @@
     "NSTRIPS_CLIENT": 2
   },
 
+  "players": {
+    "colors": [
+      ["blue", "green"],
+      ["red", "yellow"]
+    ],
+    "easing": { "up": 0.5, "down": 0.09 }
+  },
+
   "sensors": {
     "mockable": {
       "autoConnect": true,
       "interval": 20,
-      "signal": "40 + (x - Math.ceil(x/40 - 0.5)*40)"
+      "signal": "40 + (x - Math.ceil(x/(seed * 40) - 0.5)*(seed * 40))"
     },
     "baudRate": 115200,
     "ports": ["/dev/tty.usbmodem1411"],
