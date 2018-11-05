@@ -58,17 +58,15 @@ const viewer = configuration.viewer && require('@utils/viewer')(configuration.vi
 /**
  * MAPPING
  */
+let mapping = {}
 if (!configuration['mapping-file']) {
-  log.error('No mapping file given.\nPlease set the `mapping-file` config key to a valid path.')
-  process.exit(1)
-}
-
-if (!fs.existsSync(path.resolve(configuration['mapping-file']))) {
+  log.warning('No mapping file given.\nPlease set the `mapping-file` config key to a valid path.')
+} else if (!fs.existsSync(path.resolve(configuration['mapping-file']))) {
   log.error('Mapping file not found.\nPlease set the `mapping-file` config key to a valid path.')
   process.exit(1)
+} else {
+  mapping = require(path.resolve(configuration['mapping-file']))
 }
-
-const mapping = require(path.resolve(configuration['mapping-file']))
 
 module.exports = {
   log,

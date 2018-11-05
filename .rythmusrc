@@ -29,8 +29,8 @@
   "sensors": {
     "mockable": {
       "autoConnect": true,
-      "interval": 20,
-      "signal": "10 + (x - Math.ceil(x/(seed * 10) - 0.5)*(seed * 10))"
+      "interval": 100,
+      "signal": "40 + (x - Math.ceil(x/(seed * 40) - 0.5)*(seed * 40))"
     },
     "baudRate": 115200,
     "ports": ["/dev/tty.usbmodem1411"],
