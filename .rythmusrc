@@ -4,9 +4,10 @@
   "log-level": 6,
 
   "stripleds": {
-    "decimals": 2,
+    "decimals": 0,
     "default": 178,
-    "sensor": 70
+    "sensor": 68,
+    "blueDamping": [0.775, 1]
   },
 
   "hnode": {
@@ -15,7 +16,8 @@
     "TIME_OFFLINE": 1000,
     "TIME_GONE": 3000,
     "NLEDS_STRIPS": 178,
-    "NSTRIPS_CLIENT": 2
+    "NSTRIPS_CLIENT": 4,
+    "CLIENT_FRAME_RATE": 60
   },
 
   "players": {
