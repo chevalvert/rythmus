@@ -1,0 +1,42 @@
+{
+  "log-level": 8,
+  "mapping-file": "config/mapping.komplex.json",
+
+  "stripledLengths": {
+    "default": 178,
+    "sensor": 178
+  },
+
+  "players": {
+    "easing": { "up": 0.1, "down": 0.05 },
+    "colors": [
+      [255, 255, 255],
+      [255, 0, 0]
+    ]
+  },
+
+  "sensors": {
+    "mockable": {
+      "autoConnect": true,
+      "interval": 100,
+      "signal": "40 + (x - Math.ceil(x/(seed * 40) - 0.5)*(seed * 40))"
+    }
+  },
+
+  "animations": {
+    "iddle": {
+      "white": [4, 4, 4],
+      "speed": 0.01,
+      "resolution": [0.06, 0.02],
+      "posterization": 4
+    },
+    "invitation": {
+      "white": [255, 200, 150],
+      "speed": 0.1,
+      "contrast": 3
+    },
+    "loading": {
+      "bezier": [0.07, 0.12, 1.00, -0.20]
+    }
+  }
+}
