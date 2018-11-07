@@ -7,7 +7,7 @@
     "decimals": 0,
     "default": 178,
     "sensor": 68,
-    "blueDamping": [0.775, 1]
+    "blueDamping": [0.67, 1]
   },
 
   "hnode": {
@@ -35,7 +35,6 @@
       "signal": "40 + (x - Math.ceil(x/(seed * 40) - 0.5)*(seed * 40))"
     },
     "baudRate": 115200,
-    "ports": ["/dev/tty.usbmodem1411"],
     "reconnection": {
       "maxAttempts": 1000,
       "delayBetweenAttempts": 1000
