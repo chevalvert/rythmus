@@ -13,16 +13,18 @@ const animations = require('@animations')([
   require('@animations/pulse')
 ], { rythmus, players })
 
-players.setHistorySize(rythmus.circumference / 2 + 1)
+players.setHistorySize(rythmus.circumference / 2)
 
 rythmus.raf(players.update)
 rythmus.raf(rythmus.clear)
 rythmus.raf(frameCount => {
   animations.iddle(frameCount, 1 - players.confidence)
-  animations.invitation(frameCount, 1)
 
-  animations.loading(frameCount, 1)
-  animations.pulse(frameCount, 1)
+  const time = (players.lifetimeTogether % 1000) / 1000
+  animations.pulse(frameCount, 0)
+
+  animations.invitation(frameCount, 1)
+  // animations.loading(frameCount, 1)
 })
 
 rythmus.start()

@@ -1,0 +1,24 @@
+{
+  "mapping-file": null,
+
+  "sensors": {
+    // "mockable": false,
+    "baudRate": 115200,
+    "ports": [
+      "/dev/tty.usbmodem1411",
+      "/dev/tty.usbmodem1421"
+    ],
+    "reconnection": {
+      "maxAttempts": 1000,
+      "delayBetweenAttempts": 1000
+    },
+    "cyclesThreshold": 1,
+    "adaptativePulseThresholdCoefficient": 0.25,
+    "pulseSample": {
+      "size": 128,
+      "smoothing": 0.5,
+      "boundariesAnalysisWindowSize": 32,
+      "boundariesSmoothing": 0.5
+    }
+  }
+}

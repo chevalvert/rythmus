@@ -1,0 +1,36 @@
+{
+  "mapping-file": "test/rythmus/mapping.json",
+
+  "log-level": "debug",
+
+  "hnode": {
+    "PORT_SERVER": 3737,
+    "TIME_TICK": 100,
+    "TIME_OFFLINE": 1000,
+    "TIME_GONE": 3000,
+    "NLEDS_STRIPS": 178,
+    "NSTRIPS_CLIENT": 4,
+    "CLIENT_FRAME_RATE": 60
+  },
+
+  "sensors": {
+    "mockable": false,
+    "baudRate": 115200,
+    "ports": [
+      "/dev/tty.usbmodem1411",
+      "/dev/tty.usbmodem1421"
+    ],
+    "reconnection": {
+      "maxAttempts": 1000,
+      "delayBetweenAttempts": 1000
+    },
+    "cyclesThreshold": 1,
+    "adaptativePulseThresholdCoefficient": 0.25,
+    "pulseSample": {
+      "size": 128,
+      "smoothing": 0.5,
+      "boundariesAnalysisWindowSize": 32,
+      "boundariesSmoothing": 0.5
+    }
+  }
+}

@@ -1473,9 +1473,9 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.1.1"
 
-hnode@hemisphere-project/stratum-hnode:
-  version "0.2.0"
-  resolved "https://codeload.github.com/hemisphere-project/stratum-hnode/tar.gz/e1ad22f83fe7aff2b5a510cf8dd6f2d2834019c5"
+hnode@hemisphere-project/stratum-hnode#rythmus:
+  version "0.3.1"
+  resolved "https://codeload.github.com/hemisphere-project/stratum-hnode/tar.gz/cc4c7edfb88b7a7748ab4fc6c92c37d1e95cb6d2"
   dependencies:
     nodemon "^1.12.1"
 

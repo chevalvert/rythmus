@@ -9,7 +9,13 @@
     "rythmus": "index.js"
   },
   "scripts": {
-    "dev": "node . --config=rythmus.config.dev.json --hot"
+    "test:sensors": "node test/sensors --config=test/sensors/config.json",
+    "test:hearts": "node test/hearts --config=test/hearts/config.json",
+    "test:players": "node test/players --config=test/players/config.json",
+    "test:rythmus": "node test/rythmus --config=test/rythmus/config.json",
+    "graph:sensors": "npm run test:sensors | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'sensor#1 cycles' --legend 1 'sensor#1 signal' --legend 2 'sensor#2 cycles' --legend 3 'sensor#2 signal'",
+    "graph:hearts": "npm run test:hearts | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'heart#1 value' --legend 1 'heart#1 median' --legend 2 'heart#1 threshold' --legend 3 'heart#2 value' --legend 4 'heart#2 median' --legend 5 'heart#2 threshold'",
+    "graph:players": "npm run test:players | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'player#1 confidence' --legend 1 'player#1 norm value' --legend 2 'player#1 point' --legend 3 'player#2 confidence' --legend 4 'player#2 norm value' --legend 5 'player#2 point'"
   },
   "_moduleAliases": {
     "@root": ".",
@@ -21,9 +27,8 @@
   },
   "dependencies": {
     "bezier-easing": "^2.1.0",
-    "chokidar": "^2.0.4",
     "chroma-js": "^1.4.0",
-    "hnode": "hemisphere-project/stratum-hnode",
+    "hnode": "hemisphere-project/stratum-hnode#rythmus",
     "log": "^1.4.0",
     "missing-math": "^2.0.1",
     "module-alias": "^2.1.0",
@@ -34,6 +39,7 @@
     "vec23": "^0.1.0"
   },
   "devDependencies": {
+    "chokidar": "^2.0.4",
     "eslint": "^5.7.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
