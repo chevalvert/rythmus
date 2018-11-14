@@ -4,10 +4,10 @@
   "sensors": {
     // "mockable": false,
     "baudRate": 115200,
-    "ports": [
-      "/dev/tty.usbmodem1411",
-      "/dev/tty.usbmodem1421"
-    ],
+    "mapping": {
+      "/dev/tty.usbmodem1411": 0,
+      "/dev/tty.usbmodem1421": 18
+    },
     "reconnection": {
       "maxAttempts": 1000,
       "delayBetweenAttempts": 1000

@@ -1,13 +1,13 @@
 {
   "log-level": 8,
-  "viewer": "/Users/RNO/Projects/chevalvert/rythmus/rythmus-viewer/sketch",
   "mapping-file": "config/mapping.viewer.json",
-
-  "stripleds": {
-    "blueDamping": false
-  },
+  "viewer": "/Users/RNO/Projects/chevalvert/rythmus/rythmus-viewer/sketch",
 
   "hnode": {
     "CORRECT_VOLTAGE_DROP": false
+  },
+
+  "stripleds": {
+    "blueDamping": false
   }
 }

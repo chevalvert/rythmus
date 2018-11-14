@@ -7,7 +7,7 @@ process.title = 'test_' + configuration.package.name
 const Sensor = require('@abstractions/Sensor')
 
 const datas = []
-configuration.sensors.ports.forEach((address, index) => {
+Object.keys(configuration.sensors.mapping).forEach((address, index) => {
   const sensor = new Sensor({
     address,
     baudRate: configuration.sensors.baudRate,

@@ -5,7 +5,7 @@ const { configuration } = require('@configuration')
 process.title = 'test_' + configuration.package.name
 
 const Heart = require('@abstractions/Heart')
-const hearts = configuration.sensors.ports.map((address, index) => {
+const hearts = Object.keys(configuration.sensors.mapping).map((address, index) => {
   return new Heart({
     address,
     baudRate: configuration.sensors.baudRate,

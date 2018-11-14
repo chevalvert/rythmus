@@ -1,70 +1,73 @@
 {
-  "fps": 60,
-  "mapping-file": "config/mapping.production.json",
-  "log-level": 6,
 
-  "stripleds": {
-    "decimals": 0,
-    "default": 178,
-    "sensor": 68,
-    "blueDamping": [0.67, 1]
+  "fps": 60,
+  "log-level": 6,
+  "mapping-file": "config/mapping.production.json",
+
+  "animations": {
+    "iddle": {
+      "posterization": 4,
+      "resolution": [0.2, 0.02],
+      "speed": 0.01,
+      "white": [40, 40, 40]
+    },
+    "invitation": {
+      "contrast": 10,
+      "speed": [0.05, 0.1]
+    },
+    "loading": {
+      "bezier": [0.07, 0.12, 1.0, -0.2]
+    }
   },
 
   "hnode": {
-    "PORT_SERVER": 3737,
-    "TIME_TICK": 100,
-    "TIME_OFFLINE": 1000,
-    "TIME_GONE": 3000,
+    "CLIENT_FRAME_RATE": 60,
+    "CORRECT_VOLTAGE_DROP": true,
     "NLEDS_STRIPS": 178,
     "NSTRIPS_CLIENT": 4,
-    "CLIENT_FRAME_RATE": 60
+    "PORT_SERVER": 3737,
+    "TIME_GONE": 3000,
+    "TIME_OFFLINE": 1000,
+    "TIME_TICK": 100
   },
 
   "players": {
-    "easing": { "up": 1, "down": 0.09 },
     "colors": [
       [255, 255, 255],
       [255, 0, 0]
-    ]
+    ],
+    "easing": {"up": 1, "down": 0.09 }
   },
 
   "sensors": {
+    "adaptativePulseThresholdCoefficient": 0.25,
+    "baudRate": 115200,
+    "cyclesThreshold": 1,
+    "mapping": {
+      "/dev/tty.usbmodem1411": 0,
+      "/dev/tty.usbmodem1421": 18
+    },
     "mockable": {
       "autoConnect": true,
       "interval": 100,
       "signal": "40 + (x - Math.ceil(x/(seed * 40) - 0.5)*(seed * 40))"
     },
-    "baudRate": 115200,
-    "reconnection": {
-      "maxAttempts": 1000,
-      "delayBetweenAttempts": 1000
-    },
-    "cyclesThreshold": 1,
-    "adaptativePulseThresholdCoefficient": 0.25,
     "pulseSample": {
-      "size": 128,
-      "smoothing": 0.5,
       "boundariesAnalysisWindowSize": 32,
-      "boundariesSmoothing": 0.5
+      "boundariesSmoothing": 0.5,
+      "size": 128,
+      "smoothing": 0.5
+    },
+    "reconnection": {
+      "delayBetweenAttempts": 1000,
+      "maxAttempts": 1000
     }
   },
 
-  "animations": {
-    "iddle": {
-      "white": [40, 40, 40],
-      "speed": 0.01,
-      "resolution": [0.2, 0.02],
-      "posterization": 4
-    },
-
-    "invitation": {
-      "speed": [0.05, 0.1],
-      "contrast": 10
-    },
-
-    "loading": {
-      "bezier": [0.07, 0.12, 1.00, -0.20]
-    }
-
+  "stripleds": {
+    "blueDamping": [0.67, 1],
+    "default": 178,
+    "sensor": 68
   }
+
 }

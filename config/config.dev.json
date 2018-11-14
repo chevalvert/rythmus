@@ -2,7 +2,7 @@
   "log-level": 8,
   "mapping-file": "config/mapping.dev.json",
 
-  "stripledLengths": {
+  "stripleds": {
     "default": 178,
     "sensor": 178
   }
