@@ -19,11 +19,11 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@config": "main.config.js",
-    "@lib": "lib",
-    "@utils": "lib/utils",
-    "@animations": "lib/animations",
-    "@abstractions": "lib/abstractions"
+    "@configuration": "./config/configuration.js",
+    "@lib": "./lib",
+    "@utils": "./lib/utils",
+    "@animations": "./lib/animations",
+    "@abstractions": "./lib/abstractions"
   },
   "dependencies": {
     "bezier-easing": "^2.1.0",

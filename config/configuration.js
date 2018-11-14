@@ -9,11 +9,17 @@ const fs = require('fs')
  * - environment variables `rythmus_parent__child=value`
  * SEE: https://github.com/dominictarr/rc#standards
  */
+const rc = require('rc')
 const pckg = require('package')(module)
 const parseStringInObject = require('parse-strings-in-object')
-const rc = require('rc')
-const readrc = () => parseStringInObject(rc(pckg.name))
-let configuration = Object.assign({}, { package: pckg }, readrc())
+const defaultConfigPath = path.join(__dirname, '..', '.apprc')
+const readrc = () => {
+  const defaultConfig = JSON.parse(fs.readFileSync(defaultConfigPath, 'utf-8'))
+  return parseStringInObject(rc(pckg.name, defaultConfig))
+}
+
+let configuration = readrc()
+configuration.package = pckg
 
 /**
  * ACTIONS
@@ -60,9 +66,9 @@ const viewer = configuration.viewer && require('@utils/viewer')(configuration.vi
  */
 let mapping = {}
 if (!configuration['mapping-file']) {
-  log.warning('No mapping file given.\nPlease set the `mapping-file` config key to a valid path.')
+  log.warning('No mapping file given. Please set the `mapping-file` config key to a valid path.')
 } else if (!fs.existsSync(path.resolve(configuration['mapping-file']))) {
-  log.error('Mapping file not found.\nPlease set the `mapping-file` config key to a valid path.')
+  log.error('Mapping file not found. Please set the `mapping-file` config key to a valid path.')
   process.exit(1)
 } else {
   mapping = require(path.resolve(configuration['mapping-file']))

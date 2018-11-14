@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 require('module-alias/register')
 
-const { configuration } = require('@config')
+const { configuration } = require('@configuration')
 process.title = 'test_' + configuration.package.name
 
 const Player = require('@abstractions/Player')
