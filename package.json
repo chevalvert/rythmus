@@ -5,6 +5,14 @@
   "author": "Arnaud Juracek",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:chevalvert/rythmus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chevalvert/rythmus/issues"
+  },
+  "homepage": "https://github.com/chevalvert/rythmus#readme",
   "bin": {
     "rythmus": "index.js"
   },
