@@ -4,8 +4,8 @@ require('module-alias/register')
 const { configuration } = require('@configuration')
 process.title = 'test_' + configuration.package.name
 
-const chroma = require('chroma-js')
 const rythmus = require('@lib/rythmus')
+const hsl2rgb = require('hsl-rgb')
 
 let index = 0
 let side = 1
@@ -17,16 +17,17 @@ require('@utils/keyboard')(key => {
   if (key.name === 'right') side = -side
 })
 
+rythmus.raf(require('@utils/measure-fps').measure)
 rythmus.raf(frameCount => {
   rythmus.clear()
   for (let _index = 0; _index <= index; _index++) {
     for (let z = 0; z <= rythmus.height; z++) {
-      const hsl = [
+      const rgb = hsl2rgb(
         (_index / rythmus.circumference) * 360,
         Math.abs(Math.sin(frameCount * 0.1)),
         z / rythmus.height
-      ]
-      rythmus[side > 0 ? 'outside' : 'inside'](_index, z, chroma(...hsl, 'hsl').rgb())
+      )
+      rythmus[side > 0 ? 'outside' : 'inside'](_index, z, rgb)
     }
   }
 })
