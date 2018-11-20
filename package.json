@@ -21,9 +21,11 @@
     "test:hearts": "node test/hearts --config=test/hearts/config.json",
     "test:players": "node test/players --config=test/players/config.json",
     "test:rythmus": "node test/rythmus --config=test/rythmus/config.json",
+    "test:performances": "node test/performances --log-level=-1",
     "graph:sensors": "npm run test:sensors | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'sensor#1 cycles' --legend 1 'sensor#1 signal' --legend 2 'sensor#2 cycles' --legend 3 'sensor#2 signal'",
     "graph:hearts": "npm run test:hearts | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'heart#1 value' --legend 1 'heart#1 median' --legend 2 'heart#1 threshold' --legend 3 'heart#2 value' --legend 4 'heart#2 median' --legend 5 'heart#2 threshold'",
-    "graph:players": "npm run test:players | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'player#1 confidence' --legend 1 'player#1 norm value' --legend 2 'player#1 point' --legend 3 'player#2 confidence' --legend 4 'player#2 norm value' --legend 5 'player#2 point'"
+    "graph:players": "npm run test:players | feedgnuplot --lines --styleall 'lw 5' --set 'colorsequence podo' --xlen 50 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'player#1 confidence' --legend 1 'player#1 norm value' --legend 2 'player#1 point' --legend 3 'player#2 confidence' --legend 4 'player#2 norm value' --legend 5 'player#2 point'",
+    "graph:performances": "echo \"run: \nnpm run test:performances --config=<path> | feedgnuplot --lines --styleall 'lw 3' --set 'colorsequence podo' --xlen 500 --stream 0.2 --exit --terminal 'qt noraise' --legend 0 'fps' --legend 1 'median fps'\""
   },
   "_moduleAliases": {
     "@root": ".",
