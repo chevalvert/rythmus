@@ -61,6 +61,7 @@ npm run test:sensors
 npm run test:hearts
 npm run test:players
 npm run test:rythmus
+npm run test:performances
 ```
 
 ###### Plotting values using [`gnuplot`](http://www.gnuplot.info/) and [`feedgnuplot`](https://github.com/dkogan/feedgnuplot)
@@ -68,6 +69,7 @@ npm run test:rythmus
 npm run graph:sensors
 npm run graph:hearts
 npm run graph:players
+npm run graph:performances
 ```
 
 ## Development
