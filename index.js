@@ -6,25 +6,32 @@ process.title = configuration.package.name
 
 const rythmus = require('@lib/rythmus')
 const players = require('@lib/players')
+const timeline = require('@lib/timeline')
 const animations = require('@animations')([
   require('@animations/iddle'),
   require('@animations/invitation'),
-  require('@animations/loading'),
-  require('@animations/pulse')
+  require('@animations/player-sinus')
 ], { rythmus, players })
 
 players.setHistorySize(rythmus.circumference / 2)
 
 rythmus.raf(players.update)
-rythmus.raf(rythmus.clear)
+rythmus.raf(() => timeline.update(players.lifetimeTogether))
+
 rythmus.raf(frameCount => {
-  animations.iddle(frameCount, 1 - players.confidence)
+  rythmus.clear()
 
-  const time = (players.lifetimeTogether % 1000) / 1000
-  animations.pulse(frameCount, 0)
+  const emptyness = 1 - players.confidence
+  animations.iddle(frameCount, { weight: emptyness })
+  animations.invitation(frameCount, { weight: emptyness })
 
-  animations.invitation(frameCount, 1)
-  // animations.loading(frameCount, 1)
+  players.forEach(player => {
+    const animationName = 'player-' + player.animationName
+    animations[animationName](frameCount, timeline.modulate({
+      player,
+      weight: player.confidence
+    }))
+  })
 })
 
 rythmus.start()

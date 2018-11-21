@@ -36,6 +36,8 @@
       [255, 255, 255],
       [255, 0, 0]
     ],
+    "sides": ["inside", "outside"],
+    "direction": ["bottom", "top"],
     "easing": {"up": 1, "down": 0.09 }
   },
 
@@ -68,6 +70,21 @@
     "blueDamping": [0.67, 1],
     "default": 178,
     "sensor": 68
+  },
+
+  "timeline": {
+    "duration": 3000,
+    "loop": true,
+    "easings": {
+      "zmin": 1,
+      "zmax": 1,
+      "thickness": 0.09
+    },
+    "properties": {
+      "zmin": [0, 0, 0, 0, 0],
+      "zmax": [1, 1, 0, 0.5, 1],
+      "thickness": [0, "50|", 0]
+    }
   }
 
 }
