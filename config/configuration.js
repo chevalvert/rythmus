@@ -46,7 +46,7 @@ const log = new Log(configuration['log-level'] || 6)
  */
 if (configuration.hot) {
   require('chokidar')
-    .watch(configuration.configs)
+    .watch([defaultConfigPath, ...configuration.configs])
     .on('change', () => {
       try {
         configuration = Object.assign(configuration, readrc())
