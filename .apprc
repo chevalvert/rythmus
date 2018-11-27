@@ -15,8 +15,35 @@
       "contrast": 10,
       "speed": [0.05, 0.1]
     },
-    "loading": {
-      "bezier": [0.07, 0.12, 1.0, -0.2]
+    "player-swirl": {
+      "initialPositionWindow": [-2, 2],
+      "minDelayBetweenTwoParticles": 100,
+      "slope": 4,
+      "trailLength": 5
+    },
+    "player-swirl-2": {
+      "initialPositionWindow": [-20, 20],
+      "minDelayBetweenTwoParticles": -1,
+      "slope": 10,
+      "trailLength": 100
+    },
+    "player-sinus": {
+      "pulseAmplitude": 10,
+      "frequence": 1,
+      "bezier": [0.91, 0.01, 0.99, 0.29],
+      "speed": {
+        "default": 0.01,
+        "pulsing": 0.5
+      }
+    },
+    "player-sinus-double": {
+      "pulseAmplitude": 10,
+      "frequence": 2,
+      "bezier": [0.91, 0.01, 0.99, 0.29],
+      "speed": {
+        "default": 0.01,
+        "pulsing": 0.5
+      }
     }
   },
 
@@ -36,6 +63,8 @@
       [255, 255, 255],
       [255, 0, 0]
     ],
+    "sides": ["inside", "outside"],
+    "direction": ["bottom", "top"],
     "easing": {"up": 1, "down": 0.09 }
   },
 
@@ -68,6 +97,23 @@
     "blueDamping": [0.67, 1],
     "default": 178,
     "sensor": 68
+  },
+
+  "timeline": {
+    "duration": 60000,
+    "loop": true,
+    "easings": {
+      "zmin": 0.09,
+      "zmax": 0.09,
+      "thickness": 0.09,
+      "pulse": 0.09
+    },
+    "properties": {
+      "zmin": [0, 0, 0, 0.25, 0.5, 0.5, 0.5, 0, 0.1, 0],
+      "zmax": [1, 1, 1, 0.75, 0.5, 0.5, 0.5, 1, 0.1, 1],
+      "thickness": [10, 10, 10, 44, 89, 89, 10],
+      "pulse": [0, 0, 0, 1, 1, 0]
+    }
   }
 
 }
