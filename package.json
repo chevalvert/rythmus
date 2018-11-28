@@ -17,6 +17,7 @@
     "rythmus": "index.js"
   },
   "scripts": {
+    "test:sound": "node test/sound --config=test/sound/config.json",
     "test:sensors": "node test/sensors --config=test/sensors/config.json",
     "test:hearts": "node test/hearts --config=test/hearts/config.json",
     "test:players": "node test/players --config=test/players/config.json",
@@ -43,6 +44,7 @@
     "log": "^1.4.0",
     "missing-math": "^2.0.1",
     "module-alias": "^2.1.0",
+    "osc": "^2.2.4",
     "package": "^1.0.1",
     "parse-strings-in-object": "^1.2.0",
     "serialport": "^7.0.2",
