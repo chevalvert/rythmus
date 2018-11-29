@@ -6,6 +6,7 @@ process.title = configuration.package.name
 
 const rythmus = require('@lib/rythmus')
 const players = require('@lib/players')
+const sound = require('@lib/sound')
 const timeline = require('@lib/timeline')
 const animations = require('@animations')({
   modules: [
@@ -22,6 +23,12 @@ const animations = require('@animations')({
 
 players.setHistorySize(rythmus.circumference / 2 + 1)
 
+players.forEach(player => player.heart.beat.on('start', () => {
+  if (!player.isActive) return
+  const { track, note } = player.note
+  sound.midi(track, note, 127)
+}))
+
 rythmus.raf(players.update)
 rythmus.raf(() => timeline.update(players.lifetimeTogether))
 
@@ -29,6 +36,8 @@ rythmus.raf(frameCount => {
   rythmus.clear()
 
   const emptyness = 1 - players.confidence
+  sound.mix(sound.tracks.iddle, emptyness)
+
   animations.iddle(frameCount, { weight: emptyness })
   animations.invitation(frameCount, { weight: emptyness })
 
@@ -41,3 +50,7 @@ rythmus.raf(frameCount => {
 })
 
 rythmus.start()
+sound.start()
+
+process.on('SIGINT', sound.kill)
+process.on('SIGTERM', sound.kill)

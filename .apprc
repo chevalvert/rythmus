@@ -41,8 +41,8 @@
       "frequence": 2,
       "bezier": [0.91, 0.01, 0.99, 0.29],
       "speed": {
-        "default": 0.01,
-        "pulsing": 0.5
+        "default": 0,
+        "pulsing": 1
       }
     }
   },
@@ -90,6 +90,53 @@
     "reconnection": {
       "delayBetweenAttempts": 1000,
       "maxAttempts": 1000
+    }
+  },
+
+  "sound": {
+    "floatDecimals" : 3,
+    "mixer": [0, 0.78],
+    "mixerExponent": 2,
+    "tracks": {
+      "iddle": 1,
+      "acts": [2, 3, 4, 5]
+    },
+    "notes": [
+      [
+        { "track": 6, "note": 24 },
+        { "track": 7, "note": 36 },
+        { "track": 8, "note": 36 },
+        { "track": 9, "note": 44 },
+        { "track": 10, "note": 43 },
+        { "track": 11, "note": 36 },
+        { "track": 12, "note": 37 },
+        { "track": 13, "note": 37 },
+        { "track": 14, "note": 36 },
+        { "track": 15, "note": 24 }
+      ],
+      [
+        { "track": 16, "note": 24 },
+        { "track": 17, "note": 36 },
+        { "track": 18, "note": 30 },
+        { "track": 19, "note": 36 },
+        { "track": 20, "note": 28 },
+        { "track": 21, "note": 29 }
+      ]
+    ],
+    "udp": {
+      "handshakeMessage": "/ping",
+      "local": {
+        "address": "0.0.0.0",
+        "port": 2223
+      },
+      "remote": {
+        "address": "127.0.0.1",
+        "port": 2222
+      },
+      "reconnection": {
+        "delay": 10000,
+        "attempts" : 30
+      }
     }
   },
 
