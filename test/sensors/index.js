@@ -17,6 +17,9 @@ Object.keys(configuration.sensors.mapping).forEach((address, index) => {
   sensor.on('data', data => {
     datas[index] = data.cycles + ' ' + data.signal
   })
+
+  setInterval(() => sensor.setLed(!sensor.ledOn), 1000)
+
   return sensor
 })
 
