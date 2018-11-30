@@ -15,34 +15,37 @@
       "contrast": 10,
       "speed": [0.05, 0.1]
     },
-    "player-swirl": {
-      "initialPositionWindow": [-2, 2],
-      "minDelayBetweenTwoParticles": 100,
-      "slope": 4,
-      "trailLength": 5
-    },
-    "player-swirl-2": {
-      "initialPositionWindow": [-20, 20],
-      "minDelayBetweenTwoParticles": -1,
-      "slope": 10,
-      "trailLength": 100
-    },
-    "player-sinus": {
+    "player-1": {
+      "minOpacity": 0.6,
       "pulseAmplitude": 10,
+      "minimumThickness": 1,
       "frequence": 1,
-      "bezier": [0.91, 0.01, 0.99, 0.29],
       "speed": {
         "default": 0.01,
-        "pulsing": 0.5
+        "pulsing": 0.25,
+        "appearance": 0.1
       }
     },
-    "player-sinus-double": {
+    "player-2": {
+      "minOpacity": 0.6,
       "pulseAmplitude": 10,
+      "minimumThickness": -1,
       "frequence": 2,
-      "bezier": [0.91, 0.01, 0.99, 0.29],
       "speed": {
-        "default": 0,
-        "pulsing": 1
+        "default": 0.01,
+        "pulsing": 0.3,
+        "appearance": 0.01
+      }
+    },
+    "player-3": {
+      "minOpacity": 0.6,
+      "pulseAmplitude": 10,
+      "minimumThickness": 1,
+      "frequence": 3,
+      "speed": {
+        "default": 0.1,
+        "pulsing": -0.5,
+        "appearance": 0.1
       }
     }
   },
@@ -103,24 +106,20 @@
     },
     "notes": [
       [
-        { "track": 6, "note": 24 },
-        { "track": 7, "note": 36 },
-        { "track": 8, "note": 36 },
-        { "track": 9, "note": 44 },
-        { "track": 10, "note": 43 },
-        { "track": 11, "note": 36 },
-        { "track": 12, "note": 37 },
-        { "track": 13, "note": 37 },
+        { "track": 13, "note": 24 },
         { "track": 14, "note": 36 },
-        { "track": 15, "note": 24 }
+        { "track": 15, "note": 36 },
+        { "track": 16, "note": 28 },
+        { "track": 17, "note": 29 }
       ],
       [
-        { "track": 16, "note": 24 },
-        { "track": 17, "note": 36 },
-        { "track": 18, "note": 30 },
-        { "track": 19, "note": 36 },
-        { "track": 20, "note": 28 },
-        { "track": 21, "note": 29 }
+        { "track": 6, "note": 24 },
+        { "track": 7, "note": 36 },
+        { "track": 8, "note": 43 },
+        { "track": 9, "note": 36 },
+        { "track": 10, "note": 37 },
+        { "track": 11, "note": 37 },
+        { "track": 12, "note": 36 }
       ]
     ],
     "udp": {
@@ -154,14 +153,24 @@
       "zmin": 0.09,
       "zmax": 0.09,
       "thickness": 0.09,
-      "pulse": 0.09
+      "pulse": 0.09,
+      "soundtrack-2-volume": 0.09,
+      "soundtrack-3-volume": 0.09,
+      "soundtrack-4-volume": 0.09,
+      "soundtrack-5-volume": 0.09
     },
     "properties": {
-      "tracks": [1, 2, 3, 4],
-      "zmin": [0, 0, 0, 0.25, 0.5, 0.5, 0.5, 0, 0.1, 0],
-      "zmax": [1, 1, 1, 0.75, 0.5, 0.5, 0.5, 1, 0.1, 1],
-      "thickness": [10, 10, 10, 44, 89, 89, 10],
-      "pulse": [0, 0, 0, 1, 1, 0]
+      "__actIndex":           [ 1   ,  2   ,  3   ,   4   ,  1   ],
+
+      "soundtrack-2-volume":  [ 0.2 ,  0.2 ,  0.3 ,  "1|" ,  0.2 ],
+      "soundtrack-3-volume":  [ 0   ,  0.2 ,  0.3 ,  "1|" ,  0   ],
+      "soundtrack-4-volume":  [ 0   ,  0   ,  0.3 ,  "1|" ,  0   ],
+      "soundtrack-5-volume":  [ 0   ,  0   ,  0   ,  "1|" ,  0   ],
+      "zmin":                 [ 0   ,  0.5 ,  0.5 ,  "1|" ,  0   ],
+      "zmax":                 [ 1   ,  0.5 ,  0.5 ,  "1|" ,  1   ],
+      "thickness":            [ 4   , 10   , 89   , "44|" ,  4   ],
+      "thicknessCenter":      [ 0.5 ,  0.5 ,  0   ,  "1|" ,  0.5 ],
+      "pulse":                [ 0   ,  1   ,  1   ,  "1|" ,  0   ]
     }
   }
 
