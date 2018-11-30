@@ -124,6 +124,7 @@
       ]
     ],
     "udp": {
+      "debug": false,
       "handshakeMessage": "/ping",
       "local": {
         "address": "0.0.0.0",
