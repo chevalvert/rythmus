@@ -23,12 +23,6 @@ const animations = require('@animations')({
 
 players.setHistorySize(rythmus.circumference / 2 + 1)
 
-players.forEach(player => player.heart.beat.on('start', () => {
-  if (!player.isActive) return
-  const { track, note } = player.note
-  sound.midi(track, note, 127)
-}))
-
 rythmus.raf(players.update)
 rythmus.raf(() => timeline.update(players.lifetimeTogether))
 
@@ -36,8 +30,6 @@ rythmus.raf(frameCount => {
   rythmus.clear()
 
   const emptyness = 1 - players.confidence
-  sound.mix(sound.tracks.iddle, emptyness)
-
   animations.iddle(frameCount, { weight: emptyness })
   animations.invitation(frameCount, { weight: emptyness })
 
@@ -47,10 +39,22 @@ rythmus.raf(frameCount => {
       weight: player.confidence
     }))
   })
+
+  if (sound.enabled) {
+    sound.mix(sound.tracks.iddle, emptyness)
+  }
 })
 
-rythmus.start()
-sound.start()
+if (sound.enabled) {
+  sound.start()
+  players.forEach(player => player.heart.beat.on('start', () => {
+    if (!player.isActive) return
+    const { track, note } = player.note
+    sound.midi(track, note, 127)
+  }))
 
-process.on('SIGINT', sound.kill)
-process.on('SIGTERM', sound.kill)
+  process.on('SIGINT', sound.kill)
+  process.on('SIGTERM', sound.kill)
+}
+
+rythmus.start()
