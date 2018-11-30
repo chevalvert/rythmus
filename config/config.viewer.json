@@ -17,6 +17,10 @@
       "resolution": [0.2, 0.02],
       "speed": 0.01,
       "white": [40, 40, 40]
+    },
+    "invitation": {
+      "contrast": 1,
+      "speed": [0.05, 0.1]
     }
   }
 }

@@ -6,21 +6,33 @@ process.title = configuration.package.name
 
 const rythmus = require('@lib/rythmus')
 const players = require('@lib/players')
+const sound = require('@lib/sound')
 const timeline = require('@lib/timeline')
 const animations = require('@animations')({
   modules: [
     require('@animations/iddle'),
-    require('@animations/invitation'),
-    require('@animations/player-sinus'),
-    require('@animations/player-swirl')
+    require('@animations/invitation')
   ],
   variations: {
-    'player-sinus-double': require('@animations/player-sinus'),
-    'player-swirl-2': require('@animations/player-swirl')
+    'player-1': require('@animations/player-sinus'),
+    'player-2': require('@animations/player-sinus'),
+    'player-3': require('@animations/player-sinus')
   }
 }, { rythmus, players })
 
 players.setHistorySize(rythmus.circumference / 2 + 1)
+
+if (sound.enabled) {
+  sound.start()
+  players.forEach(player => player.heart.beat.on('start', () => {
+    if (!player.isActive) return
+    const { track, note } = player.note
+    sound.midi(track, note, 127)
+  }))
+
+  process.on('SIGINT', sound.kill)
+  process.on('SIGTERM', sound.kill)
+}
 
 rythmus.raf(players.update)
 rythmus.raf(() => timeline.update(players.lifetimeTogether))
@@ -32,12 +44,22 @@ rythmus.raf(frameCount => {
   animations.iddle(frameCount, { weight: emptyness })
   animations.invitation(frameCount, { weight: emptyness })
 
+  const modulations = timeline.properties
+
   players.forEach(player => {
-    animations[player.animationName](frameCount, timeline.modulate({
+    animations[player.animationName](frameCount, Object.assign({}, {
       player,
       weight: player.confidence
-    }))
+    }, modulations))
   })
+
+  if (sound.enabled) {
+    sound.mix(sound.tracks.iddle, emptyness)
+    sound.tracks.acts.forEach(trackNumber => {
+      const volume = (1 - emptyness) * modulations[`soundtrack-${trackNumber}-volume`]
+      sound.mix(trackNumber, volume)
+    })
+  }
 })
 
 rythmus.start()
