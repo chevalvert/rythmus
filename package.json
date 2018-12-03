@@ -40,9 +40,11 @@
   },
   "dependencies": {
     "bezier-easing": "^2.1.0",
+    "chokidar": "^2.0.4",
     "chroma-js": "^1.4.0",
     "hnode": "hemisphere-project/stratum-hnode#rythmus",
     "hsl-rgb": "^1.0.0",
+    "invalidate-module": "^1.0.0",
     "log": "^1.4.0",
     "missing-math": "^2.0.1",
     "module-alias": "^2.1.0",
@@ -54,13 +56,11 @@
     "vec23": "^0.1.0"
   },
   "devDependencies": {
-    "chokidar": "^2.0.4",
     "eslint": "^5.7.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "invalidate-module": "^1.0.0"
+    "eslint-plugin-standard": "^4.0.0"
   }
 }
