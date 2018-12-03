@@ -17,7 +17,7 @@
     "rythmus": "index.js"
   },
   "scripts": {
-    "test:sound": "node test/sound --config=test/sound/config.json",
+    "test:sound": "node test/sound --config=test/sound/config.json --sound.udp.debug=true",
     "test:sensors": "node test/sensors --config=test/sensors/config.json",
     "test:hearts": "node test/hearts --config=test/hearts/config.json",
     "test:players": "node test/players --config=test/players/config.json",
