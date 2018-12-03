@@ -140,10 +140,9 @@
     "notes": [
       [
         { "track": 13, "note": 24 },
-        { "track": 14, "note": 36 },
-        { "track": 15, "note": 36 },
         { "track": 16, "note": 28 },
-        { "track": 17, "note": 29 }
+        { "track": 17, "note": 29 },
+        { "track": 12, "note": 36 }
       ],
       [
         { "track": 6, "note": 24 },
@@ -151,8 +150,7 @@
         { "track": 8, "note": 43 },
         { "track": 9, "note": 36 },
         { "track": 10, "note": 37 },
-        { "track": 11, "note": 37 },
-        { "track": 12, "note": 36 }
+        { "track": 11, "note": 37 }
       ]
     ],
     "udp": {
