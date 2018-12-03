@@ -16,7 +16,10 @@ const animations = require('@animations')({
   variations: {
     'player-1': require('@animations/player-sinus'),
     'player-2': require('@animations/player-sinus'),
-    'player-3': require('@animations/player-sinus')
+    'player-3': require('@animations/player-sinus'),
+    'player-4': require('@animations/player-sinus'),
+    'player-5': require('@animations/player-sinus'),
+    'player-6': require('@animations/player-sinus')
   }
 }, { rythmus, players })
 
@@ -36,15 +39,13 @@ if (sound.enabled) {
 
 rythmus.raf(players.update)
 rythmus.raf(() => timeline.update(players.lifetimeTogether))
-
+rythmus.raf(rythmus.clear)
 rythmus.raf(frameCount => {
-  rythmus.clear()
-
   const emptyness = 1 - players.confidence
+  const modulations = timeline.properties
+
   animations.iddle(frameCount, { weight: emptyness })
   animations.invitation(frameCount, { weight: emptyness })
-
-  const modulations = timeline.properties
 
   players.forEach(player => {
     animations[player.animationName](frameCount, Object.assign({}, {

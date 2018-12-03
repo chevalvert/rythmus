@@ -47,6 +47,39 @@
         "pulsing": -0.5,
         "appearance": 0.1
       }
+    },
+    "player-4": {
+      "minOpacity": 0.6,
+      "pulseAmplitude": 44,
+      "minimumThickness": 1,
+      "frequence": 1,
+      "speed": {
+        "default": 0.01,
+        "pulsing": 0.25,
+        "appearance": 0.1
+      }
+    },
+    "player-5": {
+      "minOpacity": 0.6,
+      "pulseAmplitude": 10,
+      "minimumThickness": 2,
+      "frequence": 1,
+      "speed": {
+        "default": 0.01,
+        "pulsing": 3,
+        "appearance": 0.1
+      }
+    },
+    "player-6": {
+      "minOpacity": 0.6,
+      "pulseAmplitude": 30,
+      "minimumThickness": -10,
+      "frequence": 1,
+      "speed": {
+        "default": 0.1,
+        "pulsing": -0.2,
+        "appearance": 0.1
+      }
     }
   },
 
