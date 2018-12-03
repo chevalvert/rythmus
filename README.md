@@ -28,11 +28,13 @@ Options:
   -h, --help              Show this screen.
   -v, --version           Print the current version.
   --config=<path>         Override the default config with a given json file.
+  --force-animation=<player-animation>
+                          Force <player-animation> as both players animations.
   --hot                   Enable hot reloading of all configuration files
                           (including .rythmusrc, but excluding env and cli args)
                           and hot module replacement of all animations.
-  --viewer=<path>         Open rythmus-viewer as a previewer.
   --log-level=<level>     Set the log level (default is 'info').
+  --viewer=<path>         Open rythmus-viewer as a previewer.
 
 Log level:
   0, emergency            System is unusable.
