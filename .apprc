@@ -108,10 +108,7 @@
     "adaptativePulseThresholdCoefficient": 0.25,
     "baudRate": 115200,
     "cyclesThreshold": 1,
-    "mapping": {
-      "/dev/tty.usbmodem1411": 0,
-      "/dev/tty.usbmodem1421": 18
-    },
+    "mapping": {},
     "mockable": {
       "autoConnect": true,
       "interval": 100,
