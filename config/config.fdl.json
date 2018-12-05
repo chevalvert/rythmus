@@ -1,0 +1,114 @@
+{
+  "fps": 40,
+  "sensors": {
+    "mapping": {
+      "/dev/tty.usbmodem14241": 0,
+      "/dev/tty.usbmodem14141": 18
+    }
+  },
+  "animations": {
+    "iddle": {
+      "white": [20, 16, 20],
+      "posterization": 3,
+      "resolution": [0.2, 0.02],
+      "speed": 0.0075
+    },
+    "invitation": {
+      "contrast": 3
+    },
+    "player-1": {
+      "contrast": 3,
+      "minOpacity": 0.6,
+      "speed": {
+        "default": 0.01,
+        "pulsing": 0.1,
+        "appearance": 0.1
+      }
+    },
+    "player-2": {
+      "contrast": 3,
+      "minOpacity": 0.6,
+      "pulseAmplitude": 10,
+      "minimumThickness": -1,
+      "frequence": 2,
+      "speed": {
+        "default": 0.01,
+        "pulsing": 0.15,
+        "appearance": 0.01
+      }
+    },
+    "player-3": {
+      "contrast": 3,
+      "minOpacity": 0.6,
+      "pulseAmplitude": 10,
+      "minimumThickness": 1,
+      "frequence": 3,
+      "speed": {
+        "default": 0.1,
+        "pulsing": -0.5,
+        "appearance": 0.1
+      }
+    },
+    "player-4": {
+      "contrast": 3,
+      "minOpacity": 0.6,
+      "pulseAmplitude": 44,
+      "minimumThickness": 1,
+      "frequence": 1,
+      "speed": {
+        "default": 0.01,
+        "pulsing": 0.125,
+        "appearance": 0.1
+      }
+    },
+    "player-5": {
+      "contrast": 3,
+      "minOpacity": 0.6,
+      "pulseAmplitude": 10,
+      "minimumThickness": 2,
+      "frequence": 1,
+      "speed": {
+        "default": 0.01,
+        "pulsing": 3,
+        "appearance": 0.1
+      }
+    },
+    "player-6": {
+      "contrast": 3,
+      "minOpacity": 0.6,
+      "pulseAmplitude": 30,
+      "minimumThickness": -10,
+      "frequence": 1,
+      "speed": {
+        "default": 0.1,
+        "pulsing": -0.2,
+        "appearance": 0.1
+      }
+    }
+  },
+  "players": {
+    "colors": [
+      [250, 200, 255],
+      [255, 0, 0]
+    ],
+    "sides": ["outside", "inside"]
+  },
+
+  "stripleds": {
+    "blueDamping": [0.8, 1]
+  },
+
+  "properties": {
+    "__actIndex":           [ 1   ,  2   ,  3   ,   4   ,  1   ],
+
+    "soundtrack-2-volume":  [ 0.3 ,  0.3 ,  0.3 ,  "0.7|" ,  0.2 ],
+    "soundtrack-3-volume":  [ 0   ,  0.2 ,  0.3 ,  "0.7|" ,  0   ],
+    "soundtrack-4-volume":  [ 0   ,  0   ,  0.2 ,  "0.7|" ,  0   ],
+    "soundtrack-5-volume":  [ 0   ,  0   ,  0   ,  "0.7|" ,  0   ],
+    "zmin":                 [ 0   ,  0.5 ,  0.5 ,  "1|" ,  0   ],
+    "zmax":                 [ 1   ,  0.5 ,  0.5 ,  "1|" ,  1   ],
+    "thickness":            [ 4   , 10   , 89   , "44|" ,  -10   ],
+    "thicknessCenter":      [ 0.5 ,  0.5 ,  0   ,  "1|" ,  0.5 ],
+    "pulse":                [ 0   ,  1   ,  1   ,  "1|" ,  0   ]
+  }
+}
