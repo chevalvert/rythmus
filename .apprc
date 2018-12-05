@@ -105,6 +105,7 @@
   },
 
   "sensors": {
+    "minIBI": 200,
     "adaptativePulseThresholdCoefficient": 0.25,
     "baudRate": 115200,
     "cyclesThreshold": 1,
