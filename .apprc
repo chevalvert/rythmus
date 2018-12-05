@@ -146,9 +146,7 @@
         { "track": 6, "note": 24 },
         { "track": 7, "note": 36 },
         { "track": 8, "note": 43 },
-        { "track": 9, "note": 36 },
-        { "track": 10, "note": 37 },
-        { "track": 11, "note": 37 }
+        { "track": 9, "note": 36 }
       ]
     ],
     "udp": {
@@ -191,10 +189,10 @@
     "properties": {
       "__actIndex":           [ 1   ,  2   ,  3   ,   4   ,  1   ],
 
-      "soundtrack-2-volume":  [ 0.2 ,  0.2 ,  0.3 ,  "1|" ,  0.2 ],
-      "soundtrack-3-volume":  [ 0   ,  0.2 ,  0.3 ,  "1|" ,  0   ],
-      "soundtrack-4-volume":  [ 0   ,  0   ,  0.3 ,  "1|" ,  0   ],
-      "soundtrack-5-volume":  [ 0   ,  0   ,  0   ,  "1|" ,  0   ],
+      "soundtrack-2-volume":  [ 0.2 ,  0.2 ,  0.3 ,  "0.7|" ,  0.2 ],
+      "soundtrack-3-volume":  [ 0   ,  0.2 ,  0.3 ,  "0.7|" ,  0   ],
+      "soundtrack-4-volume":  [ 0   ,  0   ,  0.2 ,  "0.7|" ,  0   ],
+      "soundtrack-5-volume":  [ 0   ,  0   ,  0   ,  "0.7|" ,  0   ],
       "zmin":                 [ 0   ,  0.5 ,  0.5 ,  "1|" ,  0   ],
       "zmax":                 [ 1   ,  0.5 ,  0.5 ,  "1|" ,  1   ],
       "thickness":            [ 4   , 10   , 89   , "44|" ,  -10   ],
