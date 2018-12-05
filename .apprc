@@ -16,6 +16,7 @@
       "speed": [0.05, 0.1]
     },
     "player-1": {
+      "contrast": 2,
       "minOpacity": 0.6,
       "pulseAmplitude": 10,
       "minimumThickness": 1,
@@ -27,6 +28,7 @@
       }
     },
     "player-2": {
+      "contrast": 2,
       "minOpacity": 0.6,
       "pulseAmplitude": 10,
       "minimumThickness": -1,
@@ -38,6 +40,7 @@
       }
     },
     "player-3": {
+      "contrast": 2,
       "minOpacity": 0.6,
       "pulseAmplitude": 10,
       "minimumThickness": 1,
@@ -49,6 +52,7 @@
       }
     },
     "player-4": {
+      "contrast": 2,
       "minOpacity": 0.6,
       "pulseAmplitude": 44,
       "minimumThickness": 1,
@@ -60,6 +64,7 @@
       }
     },
     "player-5": {
+      "contrast": 2,
       "minOpacity": 0.6,
       "pulseAmplitude": 10,
       "minimumThickness": 2,
@@ -71,6 +76,7 @@
       }
     },
     "player-6": {
+      "contrast": 2,
       "minOpacity": 0.6,
       "pulseAmplitude": 30,
       "minimumThickness": -10,
