@@ -9,6 +9,7 @@
 - [`hemisphere-project/stratum-hnode#rythmus`](https://github.com/Hemisphere-Project/stratum-hnode/tree/rythmus) : leds UDP server & client
 - [`rythmus-viewer`](https://github.com/chevalvert/rythmus-viewer) : Rythmus `hnode` 3D previewer
 - [`rythmus-sensor`](https://github.com/chevalvert/rythmus-sensor) : Rythmus heart sensor firmware
+- [`rythmus-documentation`](https://github.com/chevalvert/rythmus-documentation) : Rythmus hardware, hookup & misc guides
 
 ## Installation 
 ```sh
