@@ -24,7 +24,6 @@
       "maxAttempts": 1000,
       "delayBetweenAttempts": 1000
     },
-    "cyclesThreshold": 1,
     "adaptativePulseThresholdCoefficient": 0.25,
     "pulseSample": {
       "size": 128,

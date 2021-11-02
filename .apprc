@@ -113,8 +113,8 @@
   "sensors": {
     "minIBI": 200,
     "adaptativePulseThresholdCoefficient": 0.25,
+    "calibratedCyclesSamplesLength": 200,
     "baudRate": 115200,
-    "cyclesThreshold": 1,
     "mapping": {},
     "mockable": {
       "autoConnect": true,

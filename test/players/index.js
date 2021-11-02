@@ -6,7 +6,7 @@ process.title = 'test_' + configuration.package.name
 
 const Player = require('@abstractions/Player')
 const Heart = require('@abstractions/Heart')
-const players = configuration.sensors.ports.map((address, index) => {
+const players = Object.keys(configuration.sensors.mapping).map((address, index) => {
   return new Player({
     index,
     // NOTE: Setting player.position to player.index is for debug purpose only,
